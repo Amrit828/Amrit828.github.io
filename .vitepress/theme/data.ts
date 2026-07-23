@@ -81,7 +81,10 @@ export const publications = [
 			'Contributed to three Financial NLP and multimodal benchmark submissions.',
 			'Achieved Task 1 leaderboard results of <strong>6th in English, 6th in Chinese, and 7th in Arabic</strong>.',
 		],
-		links: [{ label: 'GitHub', href: 'https://github.com/Amrit828/TextSentianls-FinMMEval-Task-1' }],
+		links: [
+			{ label: 'GitHub (Task 1)', href: 'https://github.com/Amrit828/TextSentianls-FinMMEval-Task-1' },
+			{ label: 'GitHub (Task 3)', href: 'https://github.com/Amrit828/finMMEval-26-Task-3' },
+		],
 	},
 ];
 
