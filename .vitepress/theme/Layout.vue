@@ -4,11 +4,12 @@ import {
 	achievements,
 	education,
 	experience,
+	heroStats,
 	profile,
 	projects,
 	publications,
 	researchInterests,
-	skills,
+	skillGroups,
 } from './data';
 
 const theme = ref<'light' | 'dark'>('light');
@@ -68,8 +69,14 @@ onMounted(() => {
 					<a class="btn" :href="profile.github" target="_blank" rel="noreferrer">GitHub</a>
 					<a class="btn" :href="profile.linkedin" target="_blank" rel="noreferrer">LinkedIn</a>
 				</div>
+				<div class="hero-stats">
+					<div v-for="stat in heroStats" :key="stat.label" class="stat">
+						<div class="stat-value">{{ stat.value }}</div>
+						<div class="stat-label">{{ stat.label }}</div>
+					</div>
+				</div>
 				<div class="research-interests">
-					<span v-for="item in researchInterests" :key="item" class="tag">{{ item }}</span>
+					<span v-for="item in researchInterests" :key="item" class="tag tag-pill">{{ item }}</span>
 				</div>
 			</section>
 
@@ -82,7 +89,12 @@ onMounted(() => {
 							<div class="entry-title">{{ pub.title }}</div>
 							<div class="entry-year">{{ pub.year }}</div>
 						</div>
-						<div class="entry-meta">{{ pub.meta }}</div>
+						<div class="entry-meta">{{ pub.role }}</div>
+						<div class="entry-facts">
+							<div><span class="entry-fact-label">Status</span>{{ pub.status }}</div>
+							<div><span class="entry-fact-label">Venue</span>{{ pub.venue }}</div>
+							<div><span class="entry-fact-label">Area</span>{{ pub.area }}</div>
+						</div>
 						<div class="entry-body">
 							<ul>
 								<li v-for="bullet in pub.bullets" :key="bullet" v-html="bullet"></li>
@@ -121,8 +133,11 @@ onMounted(() => {
 					<article v-for="project in projects" :key="project.title" class="project-card">
 						<h3>{{ project.title }}</h3>
 						<p v-html="project.body"></p>
-						<div class="project-tags">
-							<span v-for="tag in project.tags" :key="tag" class="tag">{{ tag }}</span>
+						<div class="project-stack">
+							<span class="entry-fact-label">Tech Stack</span>
+							<div class="project-stack-tags">
+								<span v-for="tech in project.stack" :key="tech" class="tag tag-pill">{{ tech }}</span>
+							</div>
 						</div>
 						<div v-if="project.github || project.live" class="project-links">
 							<a v-if="project.github" :href="project.github" target="_blank" rel="noreferrer">GitHub</a>
@@ -148,9 +163,9 @@ onMounted(() => {
 
 			<section id="skills" class="wrap">
 				<p class="eyebrow"><span class="eyebrow-num">05</span>Skills</p>
-				<h2 class="section-title">Technical Skills</h2>
+				<h2 class="section-title">Skills</h2>
 				<div class="skills-grid">
-					<div v-for="skill in skills" :key="skill.label" class="skill-row">
+					<div v-for="skill in skillGroups" :key="skill.label" class="skill-row">
 						<div class="skill-label">{{ skill.label }}</div>
 						<div class="skill-values">{{ skill.values }}</div>
 					</div>
@@ -173,6 +188,9 @@ onMounted(() => {
 					<a class="btn btn-primary" :href="`mailto:${profile.email}`">{{ profile.email }}</a>
 					<a class="btn" :href="profile.github" target="_blank" rel="noreferrer">GitHub</a>
 					<a class="btn" :href="profile.linkedin" target="_blank" rel="noreferrer">LinkedIn</a>
+					<a v-if="profile.scholar" class="btn" :href="profile.scholar" target="_blank" rel="noreferrer">Google Scholar</a>
+					<a v-if="profile.semanticScholar" class="btn" :href="profile.semanticScholar" target="_blank" rel="noreferrer">Semantic Scholar</a>
+					<a v-if="profile.orcid" class="btn" :href="profile.orcid" target="_blank" rel="noreferrer">ORCID</a>
 				</div>
 			</section>
 		</main>

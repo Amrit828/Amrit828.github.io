@@ -253,10 +253,42 @@ section {
 	text-decoration-color: var(--accent-soft);
 }
 
+.hero-stats {
+	margin-top: 2rem;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1rem;
+	padding: 1.25rem 0;
+	border-top: 1px solid var(--line);
+	border-bottom: 1px solid var(--line);
+}
+
+.stat-value {
+	font-size: 1.3rem;
+	font-weight: 700;
+	color: var(--accent);
+}
+
+.stat-label {
+	margin-top: 0.2rem;
+	font-size: 0.75rem;
+	color: var(--text-soft);
+	line-height: 1.35;
+}
+
 .research-interests {
 	margin-top: 1.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.tag-pill {
+	padding: 0.3rem 0.75rem;
+	border-radius: 999px;
+	border: 1px solid var(--line);
+	font-size: 0.8rem;
 	color: var(--text-soft);
-	font-size: 0.88rem;
 }
 
 /* Entries (publications, experience) */
@@ -297,6 +329,20 @@ section {
 	font-size: 0.85rem;
 	color: var(--text-soft);
 	margin-top: 0.35rem;
+}
+
+.entry-facts {
+	margin-top: 0.75rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem 1.5rem;
+	font-size: 0.85rem;
+	color: var(--text);
+}
+
+.entry-fact-label {
+	color: var(--text-soft);
+	margin-right: 0.4rem;
 }
 
 .entry-body {
@@ -350,10 +396,16 @@ section {
 	font-size: 0.95rem;
 }
 
-.project-tags {
-	margin-top: 0.6rem;
+.project-stack {
+	margin-top: 0.75rem;
 	font-size: 0.85rem;
-	color: var(--text-soft);
+}
+
+.project-stack-tags {
+	margin-top: 0.4rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
 }
 
 .project-links {
@@ -530,5 +582,9 @@ section {
 	.hero-name,
 	.edu-school {
 		overflow-wrap: anywhere;
+	}
+	.hero-stats {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.25rem 1rem;
 	}
 }
