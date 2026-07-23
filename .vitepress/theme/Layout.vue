@@ -3,12 +3,13 @@ import { onMounted, ref } from 'vue';
 import {
 	achievements,
 	education,
+	engineeringProjects,
 	experience,
 	heroStats,
 	profile,
-	projects,
 	publications,
 	researchInterests,
+	researchProjects,
 	skillGroups,
 } from './data';
 
@@ -129,8 +130,28 @@ onMounted(() => {
 			<section id="projects" class="wrap">
 				<p class="eyebrow"><span class="eyebrow-num">03</span>Projects</p>
 				<h2 class="section-title">Technical Projects</h2>
+
+				<p class="project-group-title">Research Tooling</p>
 				<div class="project-grid">
-					<article v-for="project in projects" :key="project.title" class="project-card">
+					<article v-for="project in researchProjects" :key="project.title" class="project-card">
+						<h3>{{ project.title }}</h3>
+						<p v-html="project.body"></p>
+						<div class="project-stack">
+							<span class="entry-fact-label">Tech Stack</span>
+							<div class="project-stack-tags">
+								<span v-for="tech in project.stack" :key="tech" class="tag tag-pill">{{ tech }}</span>
+							</div>
+						</div>
+						<div v-if="project.github || project.live" class="project-links">
+							<a v-if="project.github" :href="project.github" target="_blank" rel="noreferrer">GitHub</a>
+							<a v-if="project.live" :href="project.live" target="_blank" rel="noreferrer">Live Demo</a>
+						</div>
+					</article>
+				</div>
+
+				<p class="project-group-title project-group-title-secondary">Software Engineering</p>
+				<div class="project-grid">
+					<article v-for="project in engineeringProjects" :key="project.title" class="project-card">
 						<h3>{{ project.title }}</h3>
 						<p v-html="project.body"></p>
 						<div class="project-stack">

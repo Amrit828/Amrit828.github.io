@@ -380,6 +380,19 @@ section {
 
 /* Projects */
 
+.project-group-title {
+	font-size: 0.78rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: var(--text-soft);
+	margin-bottom: 1.25rem;
+}
+
+.project-group-title-secondary {
+	margin-top: 2.5rem;
+}
+
 .project-grid {
 	display: grid;
 	gap: 2.5rem;

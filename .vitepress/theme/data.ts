@@ -25,7 +25,7 @@ export const researchInterests = ['NLP', 'Interpretability', 'MoE', 'Multilingua
 
 export const publications = [
 	{
-		year: '2026',
+		year: 'May 2026',
 		title:
 			'A Declarative–Procedural Perspective on Expert Routing in Bilingual Mixture-of-Experts Language Models',
 		role: 'First author',
@@ -38,7 +38,7 @@ export const publications = [
 		],
 	},
 	{
-		year: '2025',
+		year: 'Oct 2025',
 		title: 'MediaEval 2025 Working Notes: Synthetic Image Detection and Segmentation',
 		role: 'First author',
 		status: 'Accepted',
@@ -54,7 +54,7 @@ export const publications = [
 		],
 	},
 	{
-		year: '2026',
+		year: 'Jun 2026',
 		title:
 			'Exploring Swin Transformers, Luminance Input, and Hybrid Architectures for Synthetic Image Detection',
 		role: 'First author',
@@ -71,7 +71,7 @@ export const publications = [
 		],
 	},
 	{
-		year: '2026',
+		year: 'Jun 2026',
 		title: 'FinMemeval 2026 Shared Task Submissions',
 		role: 'Co-author',
 		status: 'Accepted with Revisions',
@@ -87,7 +87,7 @@ export const publications = [
 
 export const experience = [
 	{
-		year: '2026 – Present',
+		year: 'May – Jun 2026',
 		title: 'NLP Research Intern',
 		meta: 'National Institute of Technology Tiruchirappalli',
 		bullets: [
@@ -103,7 +103,7 @@ export const experience = [
 	},
 ];
 
-export const projects = [
+export const researchProjects = [
 	{
 		title: 'CASSIAN — Graph-Augmented Code Understanding Platform',
 		body: 'A <strong>graph-augmented code retrieval</strong> system with function-level dependency graphs and an interactive <strong>D3 blast-radius visualization</strong> for architectural reasoning under LLM context limits.',
@@ -114,7 +114,11 @@ export const projects = [
 		title: 'A-Eye — Assistive Vision System',
 		body: 'An assistive vision prototype combining <strong>object detection</strong> and contextual audio feedback for spatial awareness, with a proposed dual-camera vision-language system. <strong>Funded</strong> by institutional student research grant.',
 		stack: ['Python', 'OpenCV', 'Object Detection', 'Text-to-Speech'],
+		github: 'https://github.com/Amrit828/A-eye',
 	},
+];
+
+export const engineeringProjects = [
 	{
 		title: 'Amrit Shop — Full-Stack E-Commerce Platform',
 		body: 'A <strong>microservices e-commerce platform</strong> — React/TypeScript storefront, Spring Boot backend split into auth, cart, order, and product services, containerized with Docker.',
@@ -127,21 +131,20 @@ export const projects = [
 export const education = {
 	school: 'Sri Sivasubramaniya Nadar College of Engineering, Chennai',
 	degree: 'B.E. Computer Science and Engineering',
-	period: '2024 – Present',
+	period: '2024 – 2028 (Expected)',
 	facts: ['CGPA: <strong>9.383 / 10.0</strong> up to 4th semester', '<strong>Ranked 1st</strong> in Department'],
 };
 
 export const skillGroups = [
 	{
 		label: 'Research Areas',
-		values: 'Multilingual NLP, Representation Learning, Mechanistic Interpretability, Mixture-of-Experts Models, Probing & Evaluation',
+		values: 'Expert-Routing Analysis, Information-Theoretic Probing, Cross-Lingual Representation Analysis, Mixture-of-Experts Interpretability',
 	},
-	{ label: 'Tools', values: 'PyTorch, Transformers, Git, LaTeX, Docker' },
+	{ label: 'Tools', values: 'PyTorch, HuggingFace Transformers, Probing Classifiers, Routing/Attention Analysis, Shared-Task Eval Harnesses' },
 	{ label: 'Languages', values: 'Python, TypeScript, Java, C' },
 ];
 
 export const achievements = [
-	'FinMemeval 2026 – <strong>Top-10</strong> multilingual leaderboard results in English, Chinese, and Arabic tracks',
 	'Merit Scholarship – <strong>3rd Position</strong>, First Year, SSN College of Engineering',
 	'<strong>Top 10</strong> – GDG Hackathon',
 ];
