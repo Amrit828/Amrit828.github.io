@@ -123,6 +123,9 @@ onMounted(() => {
 								<li v-for="bullet in item.bullets" :key="bullet" v-html="bullet"></li>
 							</ul>
 						</div>
+						<div v-if="item.links" class="entry-links">
+							<a v-for="link in item.links" :key="link.href" :href="link.href" target="_blank" rel="noreferrer">{{ link.label }}</a>
+						</div>
 					</article>
 				</div>
 			</section>
