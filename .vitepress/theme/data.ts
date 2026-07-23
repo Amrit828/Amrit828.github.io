@@ -72,7 +72,7 @@ export const publications = [
 	},
 	{
 		year: 'Jun 2026',
-		title: 'FinMemeval 2026 Shared Task Submissions',
+		title: 'FinMMEval 2026 Shared Task Submissions',
 		role: 'Co-author',
 		status: 'Accepted with Revisions',
 		venue: 'CLEF 2026 Working Notes',
