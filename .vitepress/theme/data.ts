@@ -48,7 +48,10 @@ export const publications = [
 			'Developed systems distinguishing AI-generated from authentic imagery in a shared-task setting.',
 			'Contributed to model design, experimentation, evaluation, and writing.',
 		],
-		links: [{ label: 'GitHub', href: 'https://github.com/Amrit828/mediaEval-2025' }],
+		links: [
+			{ label: 'Paper', href: 'https://2025.multimediaeval.com/paper27.pdf' },
+			{ label: 'GitHub', href: 'https://github.com/Amrit828/mediaEval-2025' },
+		],
 	},
 	{
 		year: '2026',
@@ -62,7 +65,10 @@ export const publications = [
 			'Compared pretrained Swin Transformers, luminance-only variants, MIL aggregation, and compact CNN/ResNet–GRU–ViT hybrids.',
 			'Best open-run system achieved an <strong>F1 score of 0.6997</strong> across constrained and open evaluation settings.',
 		],
-		links: [{ label: 'GitHub', href: 'https://github.com/Amrit828/mediaEval-2025' }],
+		links: [
+			{ label: 'Paper', href: 'https://2026.multimediaeval.com/paper21.pdf' },
+			{ label: 'GitHub', href: 'https://github.com/Amrit828/mediaEval-2025' },
+		],
 	},
 	{
 		year: '2026',
