@@ -85,7 +85,7 @@ onMounted(() => {
 						<div class="entry-meta">{{ pub.meta }}</div>
 						<div class="entry-body">
 							<ul>
-								<li v-for="bullet in pub.bullets" :key="bullet">{{ bullet }}</li>
+								<li v-for="bullet in pub.bullets" :key="bullet" v-html="bullet"></li>
 							</ul>
 						</div>
 						<div v-if="pub.links" class="entry-links">
@@ -107,7 +107,7 @@ onMounted(() => {
 						<div class="entry-meta">{{ item.meta }}</div>
 						<div class="entry-body">
 							<ul>
-								<li v-for="bullet in item.bullets" :key="bullet">{{ bullet }}</li>
+								<li v-for="bullet in item.bullets" :key="bullet" v-html="bullet"></li>
 							</ul>
 						</div>
 					</article>
@@ -120,7 +120,7 @@ onMounted(() => {
 				<div class="project-grid">
 					<article v-for="project in projects" :key="project.title" class="project-card">
 						<h3>{{ project.title }}</h3>
-						<p>{{ project.body }}</p>
+						<p v-html="project.body"></p>
 						<div class="project-tags">
 							<span v-for="tag in project.tags" :key="tag" class="tag">{{ tag }}</span>
 						</div>
@@ -142,7 +142,7 @@ onMounted(() => {
 					</div>
 				</div>
 				<div class="edu-facts">
-					<div v-for="fact in education.facts" :key="fact">{{ fact }}</div>
+					<div v-for="fact in education.facts" :key="fact" v-html="fact"></div>
 				</div>
 			</section>
 
@@ -161,7 +161,7 @@ onMounted(() => {
 				<p class="eyebrow"><span class="eyebrow-num">06</span>Achievements</p>
 				<h2 class="section-title">Selected Achievements</h2>
 				<ul class="achv-list">
-					<li v-for="item in achievements" :key="item">{{ item }}</li>
+					<li v-for="item in achievements" :key="item" v-html="item"></li>
 				</ul>
 			</section>
 
