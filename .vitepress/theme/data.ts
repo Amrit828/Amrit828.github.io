@@ -97,7 +97,10 @@ export const experience = [
 			'Working on representation learning, linguistic structure, and evaluation of neural language models.',
 			'Studying <strong>classical Tamil linguistic resources</strong>, including verse–commentary relations, clause structure, and syntax-aware retrieval.',
 		],
-		links: [{ label: 'Certificate', href: '/nit-internship-certificate.pdf' }],
+		links: [
+			{ label: 'GitHub', href: 'https://github.com/Amrit828/Classical-Tamil-NLP-Research-Internship' },
+			{ label: 'Certificate', href: '/nit-internship-certificate.pdf' },
+		],
 	},
 	{
 		year: '2026',
