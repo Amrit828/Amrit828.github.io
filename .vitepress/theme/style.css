@@ -103,7 +103,7 @@ img {
 }
 
 .header-inner {
-	width: min(100%, 38rem);
+	width: min(100%, 56rem);
 	margin: 0 auto;
 	padding: 0 var(--wrap-pad);
 	display: flex;
@@ -116,18 +116,22 @@ img {
 	font-weight: 600;
 	font-size: 0.95rem;
 	text-decoration: none;
+	white-space: nowrap;
 }
 
 .header-nav {
 	display: flex;
 	align-items: center;
-	gap: 1.25rem;
+	gap: 1.1rem;
+	flex-wrap: wrap;
+	justify-content: flex-end;
 }
 
 .header-nav a {
 	font-size: 0.85rem;
 	color: var(--text-soft);
 	text-decoration: none;
+	white-space: nowrap;
 }
 
 .header-nav a:hover {
