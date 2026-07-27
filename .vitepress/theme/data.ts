@@ -15,9 +15,9 @@ export const profile = {
 };
 
 export const heroStats = [
-	{ value: '6', label: 'Peer-Reviewed Work' },
-	{ value: '1', label: 'First-author ARR Submission' },
-	{ value: 'NIT-T', label: 'Research Internship' },
+	{ value: '5', label: 'Accepted Papers' },
+	{ value: '1', label: 'ARR Submission' },
+	{ value: 'NIT Trichy', label: 'Research Internship' },
 	{ value: '#1', label: 'Department Rank' },
 ];
 
@@ -29,7 +29,7 @@ export const publications = [
 		title:
 			'A Declarative–Procedural Perspective on Expert Routing in Bilingual Mixture-of-Experts Language Models',
 		role: 'First author',
-		status: 'Under Review',
+		status: 'Under Review (ARR May 2026 Cycle)',
 		venue: 'ACL Rolling Review → AACL 2026',
 		area: 'Mechanistic Interpretability',
 		bullets: [
