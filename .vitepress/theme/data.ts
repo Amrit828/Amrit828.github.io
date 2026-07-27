@@ -15,7 +15,7 @@ export const profile = {
 };
 
 export const heroStats = [
-	{ value: '4', label: 'Research Papers' },
+	{ value: '6', label: 'Peer-Reviewed Work' },
 	{ value: '1', label: 'First-author ARR Submission' },
 	{ value: 'NIT-T', label: 'Research Internship' },
 	{ value: '#1', label: 'Department Rank' },
@@ -72,18 +72,48 @@ export const publications = [
 	},
 	{
 		year: 'Jun 2026',
-		title: 'FinMMEval 2026 Shared Task Submissions',
+		title: 'TextSentinels @ FinMMEval 2026 Task 1: A Multilingual Routed Retrieval-Augmented System for Financial Multiple Choice Questions',
 		role: 'Co-author',
 		status: 'Accepted with Revisions',
 		venue: 'CLEF 2026 Working Notes',
 		area: 'Financial NLP',
 		bullets: [
-			'Contributed to three Financial NLP and multimodal benchmark submissions.',
-			'Achieved Task 1 leaderboard results of <strong>6th in English, 6th in Chinese, and 7th in Arabic</strong>.',
+			'Built a multilingual routed retrieval-augmented system (FAISS retrieval + qwen3-32b router + qwen3-32b/gpt-oss-20b scoring ensemble) for financial MCQA across English, Chinese, and Arabic.',
+			'Achieved leaderboard results of <strong>6th in English, 6th in Chinese, and 7th in Arabic</strong>.',
 		],
 		links: [
-			{ label: 'GitHub (Task 1)', href: 'https://github.com/Amrit828/TextSentianls-FinMMEval-Task-1' },
-			{ label: 'GitHub (Task 3)', href: 'https://github.com/Amrit828/finMMEval-26-Task-3' },
+			{ label: 'Paper', href: 'https://clef-staging.pages.dev/paper192.pdf' },
+			{ label: 'GitHub', href: 'https://github.com/Amrit828/TextSentianls-FinMMEval-Task-1' },
+		],
+	},
+	{
+		year: 'Jun 2026',
+		title:
+			'TextSentinels @ FinMMEval 2026 Task 2: Chronological Stabilization of a BM25-Grounded Multilingual Financial Question Answering Pipeline',
+		role: 'Co-author',
+		status: 'Accepted with Revisions',
+		venue: 'CLEF 2026 Working Notes',
+		area: 'Financial NLP',
+		bullets: [
+			'Engineered a BM25-grounded multilingual financial QA pipeline over SEC filings, statements, and tabular disclosures spanning multiple languages.',
+			'Improved local validation from 0.04 to <strong>0.28 ROUGE-1 F1</strong> across system iterations (0.18 on the final benchmark submission).',
+		],
+		links: [{ label: 'Paper', href: 'https://clef-staging.pages.dev/paper193.pdf' }],
+	},
+	{
+		year: 'Jun 2026',
+		title: 'TextSentinels @ FinMMEval 2026 Task 3: Multi-Asset Financial Decision Making Using Machine Learning and Financial Transformers',
+		role: 'Co-author',
+		status: 'Accepted with Revisions',
+		venue: 'CLEF 2026 Working Notes',
+		area: 'Financial NLP',
+		bullets: [
+			'Developed an iterative quantitative trading agent, evolving from a FinBERT sentiment pipeline to an XGBoost classifier with a recursive sentiment-memory feature.',
+			'Achieved an out-of-sample <strong>cumulative return of 1.1354</strong> and an <strong>annualized Sharpe ratio of 2.0260</strong> in live forward-testing.',
+		],
+		links: [
+			{ label: 'Paper', href: 'https://clef-staging.pages.dev/paper191.pdf' },
+			{ label: 'GitHub', href: 'https://github.com/Amrit828/finMMEval-26-Task-3' },
 		],
 	},
 ];
@@ -141,15 +171,6 @@ export const education = {
 	period: '2024 – 2028 (Expected)',
 	facts: ['CGPA: <strong>9.383 / 10.0</strong> up to 4th semester', '<strong>Ranked 1st</strong> in Department'],
 };
-
-export const skillGroups = [
-	{
-		label: 'Research Areas',
-		values: 'Expert-Routing Analysis, Information-Theoretic Probing, Cross-Lingual Representation Analysis, Mixture-of-Experts Interpretability',
-	},
-	{ label: 'Tools', values: 'PyTorch, HuggingFace Transformers, Probing Classifiers, Routing/Attention Analysis, Shared-Task Eval Harnesses' },
-	{ label: 'Languages', values: 'Python, TypeScript, Java, C' },
-];
 
 export const achievements = [
 	'Merit Scholarship – <strong>3rd Position</strong>, First Year, SSN College of Engineering',

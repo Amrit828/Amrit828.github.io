@@ -460,31 +460,6 @@ section {
 	color: var(--text-soft);
 }
 
-/* Skills */
-
-.skills-grid {
-	display: grid;
-	gap: 1rem;
-}
-
-.skill-row {
-	display: flex;
-	gap: 0.5rem;
-	font-size: 0.92rem;
-	flex-wrap: wrap;
-}
-
-.skill-label {
-	color: var(--accent);
-	font-weight: 600;
-	flex-shrink: 0;
-	min-width: 8.5rem;
-}
-
-.skill-values {
-	color: var(--text-soft);
-}
-
 /* Achievements */
 
 .achv-list {
@@ -507,6 +482,127 @@ section {
 	position: absolute;
 	left: 0;
 	color: var(--accent);
+}
+
+/* Blog / markdown content pages */
+
+.content-page {
+	padding-top: 3rem;
+	padding-bottom: 4rem;
+	max-width: 720px;
+}
+
+.content-page h1 {
+	font-size: 2rem;
+	margin-bottom: 0.5rem;
+}
+
+.content-page h2 {
+	font-size: 1.4rem;
+	margin-top: 2.5rem;
+	margin-bottom: 0.75rem;
+}
+
+.content-page h3 {
+	font-size: 1.1rem;
+	margin-top: 2rem;
+	margin-bottom: 0.5rem;
+}
+
+.content-page p {
+	color: var(--text-soft);
+	margin: 0 0 1rem;
+}
+
+.content-page a {
+	color: var(--accent);
+}
+
+.content-page ul,
+.content-page ol {
+	color: var(--text-soft);
+	padding-left: 1.25rem;
+	margin: 0 0 1rem;
+}
+
+.content-page li {
+	margin-bottom: 0.4rem;
+}
+
+.content-page pre {
+	background: var(--bg-raised);
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	padding: 1rem;
+	overflow-x: auto;
+	font-size: 0.85rem;
+	margin: 0 0 1.25rem;
+}
+
+.content-page code {
+	background: var(--bg-raised);
+	border-radius: 4px;
+	padding: 0.1rem 0.35rem;
+	font-size: 0.88em;
+}
+
+.content-page pre code {
+	background: none;
+	padding: 0;
+}
+
+.content-page blockquote {
+	border-left: 3px solid var(--accent);
+	margin: 0 0 1.25rem;
+	padding: 0.1rem 0 0.1rem 1rem;
+	color: var(--text-soft);
+}
+
+.content-page hr {
+	border: none;
+	border-top: 1px solid var(--line);
+	margin: 2rem 0;
+}
+
+.blog-date {
+	color: var(--text-soft);
+	font-size: 0.9rem;
+	margin-bottom: 2rem;
+}
+
+.blog-list {
+	display: grid;
+	gap: 1.5rem;
+	margin-top: 2rem;
+	list-style: none;
+	padding: 0;
+}
+
+.blog-list li {
+	padding-bottom: 1.5rem;
+	border-bottom: 1px solid var(--line);
+}
+
+.blog-list li:last-child {
+	border-bottom: none;
+}
+
+.blog-list a {
+	font-size: 1.15rem;
+	font-weight: 600;
+	color: var(--text);
+	text-decoration: none;
+}
+
+.blog-list a:hover {
+	color: var(--accent);
+}
+
+.blog-list-date {
+	display: block;
+	color: var(--text-soft);
+	font-size: 0.88rem;
+	margin-top: 0.3rem;
 }
 
 /* Contact / footer */
@@ -569,13 +665,6 @@ section {
 	.entry.featured {
 		border-radius: 10px;
 		padding: 1.25rem 1rem 1.5rem;
-	}
-	.skill-row {
-		flex-direction: column;
-		gap: 0.2rem;
-	}
-	.skill-label {
-		min-width: 0;
 	}
 	.header-nav {
 		gap: 0.6rem;
