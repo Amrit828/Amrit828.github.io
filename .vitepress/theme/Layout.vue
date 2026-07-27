@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useRoute } from 'vitepress';
 import { onMounted, ref } from 'vue';
 import {
 	achievements,
@@ -10,8 +11,9 @@ import {
 	publications,
 	researchInterests,
 	researchProjects,
-	skillGroups,
 } from './data';
+
+const route = useRoute();
 
 const theme = ref<'light' | 'dark'>('light');
 
@@ -41,11 +43,12 @@ onMounted(() => {
 			<div class="header-inner">
 				<a class="brand" href="#top">{{ profile.name }}</a>
 				<nav class="header-nav">
-					<a href="#research">Research</a>
-					<a href="#experience">Experience</a>
-					<a href="#projects">Projects</a>
-					<a href="#education">Education</a>
-					<a href="#contact">Contact</a>
+					<a href="/#research">Research</a>
+					<a href="/#experience">Experience</a>
+					<a href="/#projects">Projects</a>
+					<a href="/#education">Education</a>
+					<a href="/blog/">Blog</a>
+					<a href="/#contact">Contact</a>
 					<button class="theme-toggle" @click="toggleTheme" :aria-label="`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`">
 						{{ theme === 'dark' ? '☀' : '☾' }}
 					</button>
@@ -53,7 +56,7 @@ onMounted(() => {
 			</div>
 		</header>
 
-		<main>
+		<main v-if="route.path === '/'">
 			<section id="top" class="hero wrap">
 				<div class="hero-inner">
 					<img class="hero-portrait" :src="profile.portrait" alt="Portrait of Amrit Gopinath" />
@@ -185,19 +188,8 @@ onMounted(() => {
 				</div>
 			</section>
 
-			<section id="skills" class="wrap">
-				<p class="eyebrow"><span class="eyebrow-num">05</span>Skills</p>
-				<h2 class="section-title">Skills</h2>
-				<div class="skills-grid">
-					<div v-for="skill in skillGroups" :key="skill.label" class="skill-row">
-						<div class="skill-label">{{ skill.label }}</div>
-						<div class="skill-values">{{ skill.values }}</div>
-					</div>
-				</div>
-			</section>
-
 			<section id="achievements" class="wrap">
-				<p class="eyebrow"><span class="eyebrow-num">06</span>Achievements</p>
+				<p class="eyebrow"><span class="eyebrow-num">05</span>Achievements</p>
 				<h2 class="section-title">Selected Achievements</h2>
 				<ul class="achv-list">
 					<li v-for="item in achievements" :key="item" v-html="item"></li>
@@ -205,7 +197,7 @@ onMounted(() => {
 			</section>
 
 			<section id="contact" class="wrap">
-				<p class="eyebrow"><span class="eyebrow-num">07</span>Contact</p>
+				<p class="eyebrow"><span class="eyebrow-num">06</span>Contact</p>
 				<h2 class="section-title">Open for Collaboration</h2>
 				<p class="hero-intro">For research inquiries, graduate opportunities, or technical conversation.</p>
 				<div class="contact-links">
@@ -217,6 +209,10 @@ onMounted(() => {
 					<a v-if="profile.orcid" class="btn" :href="profile.orcid" target="_blank" rel="noreferrer">ORCID</a>
 				</div>
 			</section>
+		</main>
+
+		<main v-else class="content-page wrap">
+			<Content />
 		</main>
 
 		<footer class="site-footer wrap">
