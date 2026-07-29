@@ -74,7 +74,7 @@ export const publications = [
 		year: 'Jun 2026',
 		title: 'TextSentinels @ FinMMEval 2026 Task 1: A Multilingual Routed Retrieval-Augmented System for Financial Multiple Choice Questions',
 		role: 'Co-author',
-		status: 'Accepted with Revisions',
+		status: 'Accepted',
 		venue: 'CLEF 2026 Working Notes',
 		area: 'Financial NLP',
 		bullets: [
@@ -91,7 +91,7 @@ export const publications = [
 		title:
 			'TextSentinels @ FinMMEval 2026 Task 2: Chronological Stabilization of a BM25-Grounded Multilingual Financial Question Answering Pipeline',
 		role: 'Co-author',
-		status: 'Accepted with Revisions',
+		status: 'Accepted',
 		venue: 'CLEF 2026 Working Notes',
 		area: 'Financial NLP',
 		bullets: [
@@ -104,7 +104,7 @@ export const publications = [
 		year: 'Jun 2026',
 		title: 'TextSentinels @ FinMMEval 2026 Task 3: Multi-Asset Financial Decision Making Using Machine Learning and Financial Transformers',
 		role: 'Co-author',
-		status: 'Accepted with Revisions',
+		status: 'Accepted',
 		venue: 'CLEF 2026 Working Notes',
 		area: 'Financial NLP',
 		bullets: [
