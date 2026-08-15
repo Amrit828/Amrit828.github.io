@@ -11,6 +11,7 @@ import {
 	publications,
 	researchInterests,
 	researchProjects,
+	researchWork,
 } from './data';
 
 const route = useRoute();
@@ -111,8 +112,34 @@ onMounted(() => {
 				</div>
 			</section>
 
+			<section id="research-work" class="wrap">
+				<p class="eyebrow"><span class="eyebrow-num">02</span>Research Work</p>
+				<h2 class="section-title">Shared Tasks &amp; Team Research</h2>
+				<div class="entry-list">
+					<article v-for="item in researchWork" :key="item.title" class="entry">
+						<div class="entry-head">
+							<div class="entry-title">{{ item.title }}</div>
+							<div class="entry-year">{{ item.year }}</div>
+						</div>
+						<div class="entry-meta">{{ item.role }}</div>
+						<div class="entry-facts">
+							<div><span class="entry-fact-label">Venue</span>{{ item.venue }}</div>
+							<div><span class="entry-fact-label">Area</span>{{ item.area }}</div>
+						</div>
+						<div class="entry-body">
+							<ul>
+								<li v-for="bullet in item.bullets" :key="bullet" v-html="bullet"></li>
+							</ul>
+						</div>
+						<div v-if="item.links" class="entry-links">
+							<a v-for="link in item.links" :key="link.href" :href="link.href" target="_blank" rel="noreferrer">{{ link.label }}</a>
+						</div>
+					</article>
+				</div>
+			</section>
+
 			<section id="experience" class="wrap">
-				<p class="eyebrow"><span class="eyebrow-num">02</span>Experience</p>
+				<p class="eyebrow"><span class="eyebrow-num">03</span>Experience</p>
 				<h2 class="section-title">Research Experience &amp; Service</h2>
 				<div class="entry-list">
 					<article v-for="item in experience" :key="item.title" class="entry">
@@ -134,7 +161,7 @@ onMounted(() => {
 			</section>
 
 			<section id="projects" class="wrap">
-				<p class="eyebrow"><span class="eyebrow-num">03</span>Projects</p>
+				<p class="eyebrow"><span class="eyebrow-num">04</span>Projects</p>
 				<h2 class="section-title">Technical Projects</h2>
 
 				<p class="project-group-title">Research Tooling</p>
@@ -175,7 +202,7 @@ onMounted(() => {
 			</section>
 
 			<section id="education" class="wrap">
-				<p class="eyebrow"><span class="eyebrow-num">04</span>Education</p>
+				<p class="eyebrow"><span class="eyebrow-num">05</span>Education</p>
 				<h2 class="section-title">Academic Background</h2>
 				<div class="edu-row">
 					<div>
@@ -189,7 +216,7 @@ onMounted(() => {
 			</section>
 
 			<section id="achievements" class="wrap">
-				<p class="eyebrow"><span class="eyebrow-num">05</span>Achievements</p>
+				<p class="eyebrow"><span class="eyebrow-num">06</span>Achievements</p>
 				<h2 class="section-title">Selected Achievements</h2>
 				<ul class="achv-list">
 					<li v-for="item in achievements" :key="item" v-html="item"></li>
@@ -197,7 +224,7 @@ onMounted(() => {
 			</section>
 
 			<section id="contact" class="wrap">
-				<p class="eyebrow"><span class="eyebrow-num">06</span>Contact</p>
+				<p class="eyebrow"><span class="eyebrow-num">07</span>Contact</p>
 				<h2 class="section-title">Open for Collaboration</h2>
 				<p class="hero-intro">For research inquiries, graduate opportunities, or technical conversation.</p>
 				<div class="contact-links">

@@ -29,9 +29,9 @@ export const publications = [
 		title:
 			'A Declarative–Procedural Perspective on Expert Routing in Bilingual Mixture-of-Experts Language Models',
 		role: 'First author',
-		status: 'Under Review (ARR May 2026 Cycle)',
-		venue: 'ACL Rolling Review → AACL 2026',
-		area: 'Mechanistic Interpretability',
+		status: 'Preprint Forthcoming',
+		venue: 'ARR Submission & Target Venue: BlackboxNLP 2026',
+		area: 'NLP, Linguistics & Interpretability, MoE Analysis',
 		bullets: [
 			'Studied linguistic specialization and expert routing in <strong>bilingual English–German Mixture-of-Experts Transformers</strong> using probing and information-theoretic analysis.',
 			'Led the research design, experimentation, writing, and submission as first author.',
@@ -114,6 +114,21 @@ export const publications = [
 		links: [
 			{ label: 'Paper', href: 'https://clef-staging.pages.dev/paper191.pdf' },
 			{ label: 'GitHub', href: 'https://github.com/Amrit828/finMMEval-26-Task-3' },
+		],
+	},
+];
+
+export const researchWork = [
+	{
+		year: '2026',
+		title: 'Dravidian-CodeMix Shared Task — Tamil Hierarchical Hate Speech and Tulu Hope Speech Detection',
+		role: 'Team member',
+		venue: 'FIRE 2026',
+		area: 'Dravidian-Language NLP',
+		bullets: [
+			'Built a <strong>5-level hierarchical hate-speech classifier for Tamil</strong> (Hate/Non-Hate → Target → Implicit/Explicit → 32-way Subcategory → 6-way Bias) on a shared IndicBERT encoder with graduated unfreezing, hard-gated at Level 1, and a per-level sweep over representation (CLS vs. mean-pooled vs. TF-IDF) and classifier (SVM vs. LogReg) to select the best combination at each level.',
+			'Built a <strong>joint coarse/fine-grained hope-speech system for Tulu</strong> — a single shared IndicBERT encoder with two linear heads producing 3-way tone and 5-way hope-type predictions from one forward pass, replacing an earlier two-encoder design that could not satisfy the single-pass requirement.',
+			'Ran extensive ablations across both tasks — encoder choice (IndicBERT vs. mBERT vs. MuRIL), unfreeze depth, from-scratch BiLSTM/BiGRU baselines, PCA/LDA bottleneck decomposition, and a router/ensemble architecture — to identify each task\'s final pipeline.',
 		],
 	},
 ];
