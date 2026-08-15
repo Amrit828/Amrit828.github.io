@@ -36,6 +36,7 @@ export const publications = [
 			'Studied linguistic specialization and expert routing in <strong>bilingual English–German Mixture-of-Experts Transformers</strong> using probing and information-theoretic analysis.',
 			'Led the research design, experimentation, writing, and submission as first author.',
 		],
+		links: [{ label: 'Paper', href: '/DP-MoE-Research-Paper.pdf' }],
 	},
 	{
 		year: 'Oct 2025',
