@@ -1,38 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
 
 :root {
-	--bg: #f3e4c9;
-	--bg-raised: #e3dcc4;
-	--text: #0a2947;
-	--text-soft: rgba(10, 41, 71, 0.62);
-	--line: rgba(10, 41, 71, 0.14);
-	--accent: #8b5e3c;
-	--accent-soft: rgba(139, 94, 60, 0.14);
+	--bg: #f3f4f4;
+	--bg-raised: #e4ebeb;
+	--text: #061e29;
+	--text-soft: rgba(6, 30, 41, 0.64);
+	--line: rgba(6, 30, 41, 0.14);
+	--accent: #2389b0;
+	--accent-soft: rgba(35, 137, 176, 0.16);
+	--accent-2: #4d7d82;
+	--accent-2-soft: rgba(95, 149, 152, 0.18);
 	--font-display: 'Space Grotesk', 'IBM Plex Sans', system-ui, sans-serif;
 	--font-body: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
 	color-scheme: light;
 }
 
 :root[data-theme='dark'] {
-	--bg: #0a2947;
-	--bg-raised: #193652;
-	--text: #f3e4c9;
-	--text-soft: rgba(243, 228, 201, 0.64);
-	--line: rgba(243, 228, 201, 0.14);
-	--accent: #c99a6c;
-	--accent-soft: rgba(201, 154, 108, 0.18);
+	--bg: #061e29;
+	--bg-raised: #13303a;
+	--text: #f3f4f4;
+	--text-soft: rgba(243, 244, 244, 0.64);
+	--line: rgba(243, 244, 244, 0.16);
+	--accent: #4fb6ba;
+	--accent-soft: rgba(79, 182, 186, 0.2);
+	--accent-2: #6b90a0;
+	--accent-2-soft: rgba(107, 144, 160, 0.2);
 	color-scheme: dark;
 }
 
 @media (prefers-color-scheme: dark) {
 	:root:not([data-theme='light']) {
-		--bg: #0a2947;
-		--bg-raised: #193652;
-		--text: #f3e4c9;
-		--text-soft: rgba(243, 228, 201, 0.64);
-		--line: rgba(243, 228, 201, 0.14);
-		--accent: #c99a6c;
-		--accent-soft: rgba(201, 154, 108, 0.18);
+		--bg: #061e29;
+		--bg-raised: #13303a;
+		--text: #f3f4f4;
+		--text-soft: rgba(243, 244, 244, 0.64);
+		--line: rgba(243, 244, 244, 0.16);
+		--accent: #4fb6ba;
+		--accent-soft: rgba(79, 182, 186, 0.2);
+		--accent-2: #6b90a0;
+		--accent-2-soft: rgba(107, 144, 160, 0.2);
 		color-scheme: dark;
 	}
 }
@@ -178,7 +184,7 @@ section {
 }
 
 .eyebrow-num {
-	color: var(--accent);
+	color: var(--accent-2);
 }
 
 .section-title {
@@ -315,7 +321,7 @@ section {
 	border-radius: 12px;
 	padding: 1.5rem var(--wrap-pad) 1.75rem;
 	margin: -1.5rem calc(var(--wrap-pad) * -1) 0;
-	border-left: 2px solid var(--accent);
+	border-left: 2px solid var(--accent-2);
 }
 
 .entry-head {
