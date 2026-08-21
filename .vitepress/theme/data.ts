@@ -29,14 +29,14 @@ export const publications = [
 		title:
 			'A Declarative–Procedural Perspective on Expert Routing in Bilingual Mixture-of-Experts Language Models',
 		role: 'First author',
-		status: 'Preprint Forthcoming',
+		status: 'Preprint',
 		venue: 'ARR Submission & Target Venue: BlackboxNLP 2026',
 		area: 'NLP, Linguistics & Interpretability, MoE Analysis',
 		bullets: [
 			'Studied linguistic specialization and expert routing in <strong>bilingual English–German Mixture-of-Experts Transformers</strong> using probing and information-theoretic analysis.',
 			'Led the research design, experimentation, writing, and submission as first author.',
 		],
-		links: [{ label: 'Paper', href: '/DP-MoE-Research-Paper.pdf' }],
+		links: [{ label: 'arXiv Preprint', href: 'https://arxiv.org/abs/2608.15102' }],
 	},
 	{
 		year: 'Oct 2025',
