@@ -30,7 +30,7 @@ export const publications = [
 			'A Declarative–Procedural Perspective on Expert Routing in Bilingual Mixture-of-Experts Language Models',
 		role: 'First author',
 		status: 'Preprint',
-		venue: 'ARR Submission & Target Venue: BlackboxNLP 2026',
+		venue: 'ARR Submission',
 		area: 'NLP, Linguistics & Interpretability, MoE Analysis',
 		bullets: [
 			'Studied linguistic specialization and expert routing in <strong>bilingual English–German Mixture-of-Experts Transformers</strong> using probing and information-theoretic analysis.',
@@ -141,6 +141,7 @@ export const experience = [
 		meta: 'National Institute of Technology Tiruchirappalli',
 		bullets: [
 			'Working on representation learning, linguistic structure, and evaluation of neural language models.',
+			'Preparing a submission for <strong>ICON</strong>.',
 			'Studying <strong>classical Tamil linguistic resources</strong>, including verse–commentary relations, clause structure, and syntax-aware retrieval.',
 		],
 		links: [
