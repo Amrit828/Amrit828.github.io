@@ -16,7 +16,7 @@ export const profile = {
 
 export const heroStats = [
 	{ value: '5', label: 'Accepted Papers' },
-	{ value: '1', label: 'ARR Submission' },
+	{ value: '2', label: 'Active Submissions' },
 	{ value: 'NIT Trichy', label: 'Research Internship' },
 	{ value: '#1', label: 'Department Rank' },
 ];
@@ -24,6 +24,19 @@ export const heroStats = [
 export const researchInterests = ['NLP', 'Interpretability', 'MoE', 'Multilingual Models', 'Representation Learning', 'Vision-Language Models'];
 
 export const publications = [
+	{
+		year: 'Sep 2026',
+		title: 'Vectorizing Classical Tamil: Representation Learning for Verse–Commentary Pairs',
+		role: 'Co-author',
+		status: 'Submitted',
+		venue: 'ICON 2026',
+		area: 'Classical Tamil NLP, Representation Learning',
+		bullets: [
+			'Constructed a corpus of <strong>1,262 Classical Tamil verse–commentary (urai) pairs</strong> spanning five source sections and evaluated what neural representations recover beyond lexical overlap.',
+			'Compared recurrent, Transformer, Siamese-style, encoder–decoder, and decoder-only models with controls-first evaluation, including minimal-pair word-order probes.',
+		],
+		links: [{ label: 'Paper', href: '/classical-tamil-icon-submission.pdf' }],
+	},
 	{
 		year: 'May 2026',
 		title:
@@ -141,7 +154,7 @@ export const experience = [
 		meta: 'National Institute of Technology Tiruchirappalli',
 		bullets: [
 			'Working on representation learning, linguistic structure, and evaluation of neural language models.',
-			'Preparing a submission for <strong>ICON</strong>.',
+			'Submitted <strong>“Vectorizing Classical Tamil: Representation Learning for Verse–Commentary Pairs”</strong> to ICON.',
 			'Studying <strong>classical Tamil linguistic resources</strong>, including verse–commentary relations, clause structure, and syntax-aware retrieval.',
 		],
 		links: [
