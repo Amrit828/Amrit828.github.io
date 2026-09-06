@@ -134,6 +134,21 @@ export const publications = [
 
 export const researchWork = [
 	{
+		year: 'Aug 2026',
+		title: 'Having a State Is Not Knowing It',
+		role: 'Co-author',
+		venue: 'Apart Research — Digital Minds Research Sprint',
+		area: 'Mechanistic Interpretability, AI Safety',
+		bullets: [
+			'Treated <strong>LLM introspection as a hierarchy of falsifiable capabilities</strong>, rather than a binary property, in collaboration with Raghul Sugumar.',
+			'Replicated concept injection in Llama-3.2-3B-Instruct and developed controlled decision-state and counterfactual benchmarks: native self-report was weak but trainable, while external probes decoded the same state perfectly.',
+		],
+		links: [
+			{ label: 'Project', href: 'https://apartresearch.com/project/having-a-state-is-not-knowing-it-0zbf' },
+			{ label: 'Report', href: 'https://framerforms.s3.us-east-1.amazonaws.com/form-uploads/ab0ae484-3d40-47e8-a323-fe485236ac45-Team_Layer_8_Legends_track_3_report_final.pdf' },
+		],
+	},
+	{
 		year: '2026',
 		title: 'Dravidian-CodeMix Shared Task — Tamil Hierarchical Hate Speech and Tulu Hope Speech Detection',
 		role: 'Team member',
