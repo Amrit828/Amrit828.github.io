@@ -15,13 +15,38 @@ export const profile = {
 };
 
 export const heroStats = [
-	{ value: '5', label: 'Accepted Papers' },
-	{ value: '2', label: 'Active Submissions' },
-	{ value: 'NIT Trichy', label: 'Research Internship' },
-	{ value: '#1', label: 'Department Rank' },
+	{ value: '9.383', label: 'CGPA / 10.0' },
+	{ value: '#1', label: 'Department rank' },
+	{ value: '1', label: 'Active submission' },
 ];
 
 export const researchInterests = ['NLP', 'Interpretability', 'MoE', 'Multilingual Models', 'Representation Learning', 'Vision-Language Models'];
+
+export const selectedResearch = [
+	{
+		year: '2026',
+		title: 'A Declarative-Procedural Perspective on Expert Routing in Bilingual MoE Language Models',
+		meta: 'ARR Submission · arXiv Preprint · First author',
+		bullets: [
+			'Asked whether expert routing in bilingual English-German MoE language models primarily reflects language identity and lexical information or higher-level grammatical and syntactic structure.',
+			'Designed controlled bilingual corpora and held-out lexical, grammatical, and syntactic probes; analyzed routing with entropy, mutual information, Jensen-Shannon divergence, frequency controls, and targeted ablations.',
+		],
+		links: [{ label: 'Read on arXiv', href: 'https://arxiv.org/abs/2608.15102' }],
+	},
+	{
+		year: '2026',
+		title: 'Having a State Is Not Knowing It',
+		meta: 'Apart Research Sprint · Co-author',
+		bullets: [
+			'Investigated whether language models can report causally relevant internal decision states, separating possession of a state from verbal access through a falsifiable hierarchy of introspection capabilities.',
+			'Built a controlled Qwen benchmark from measured logit-margin shifts: native self-report reached <strong>0.24 F1</strong>, trainable self-report <strong>0.52 F1</strong>, and external probes decoded the state perfectly.',
+		],
+		links: [
+			{ label: 'View project', href: 'https://apartresearch.com/project/having-a-state-is-not-knowing-it-0zbf' },
+			{ label: 'Read report', href: 'https://framerforms.s3.us-east-1.amazonaws.com/form-uploads/ab0ae484-3d40-47e8-a323-fe485236ac45-Team_Layer_8_Legends_track_3_report_final.pdf' },
+		],
+	},
+];
 
 export const publications = [
 	{
