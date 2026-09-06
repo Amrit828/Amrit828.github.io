@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
-import { achievements, education, engineeringProjects, experience, heroStats, profile, publications, researchInterests, researchProjects, selectedResearch } from './data';
+import { achievements, education, engineeringProjects, experience, heroStats, profile, publications, researchInterests, researchProjects, researchWork, selectedResearch } from './data';
 
 const theme = ref<'light' | 'dark'>('light');
 function applyTheme(next: 'light' | 'dark') {
@@ -23,7 +23,7 @@ onMounted(() => applyTheme((localStorage.getItem('theme') as 'light' | 'dark') |
 			<section class="hero panel">
 				<div class="hero-kicker">Research portfolio · Chennai, India</div>
 				<div class="hero-grid">
-					<div><p class="hero-overline">Amrit Gopinath</p><h1>Making language-model behavior easier to <em>explain.</em></h1></div>
+					<div><p class="hero-overline">Amrit Gopinath</p><h1>Understanding language models, <em>carefully.</em></h1></div>
 					<img class="portrait" :src="profile.portrait" alt="Amrit Gopinath" />
 				</div>
 				<div class="hero-bottom"><p>{{ profile.intro }}</p><div class="hero-links"><a :href="profile.resumeHref" download>Download résumé <span>↘</span></a><a :href="profile.github" target="_blank" rel="noreferrer">GitHub <span>↗</span></a><a :href="profile.linkedin" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a></div></div>
@@ -52,8 +52,8 @@ onMounted(() => applyTheme((localStorage.getItem('theme') as 'light' | 'dark') |
 
 			<section id="work" class="section panel">
 				<div class="section-label"><span>03</span> Supporting work</div>
-				<div class="work-layout"><div><h2>From shared tasks to research tools.</h2><p class="work-intro">Additional work across synthetic-media detection, financial NLP, Classical Tamil representation learning, and research tooling.</p></div><div class="compact-list"><article v-for="pub in publications" :key="pub.title" class="compact-item"><div><h3>{{ pub.title }}</h3><p>{{ pub.venue }} · {{ pub.role }}</p></div><span>{{ pub.year }}</span></article></div></div>
-				<div class="project-row"><article v-for="project in [...researchProjects, ...engineeringProjects]" :key="project.title" class="project-card"><h3>{{ project.title }}</h3><p v-html="project.body"></p><a :href="project.github" target="_blank" rel="noreferrer">Explore project ↗</a></article></div>
+				<div class="work-layout"><div><h2>From shared tasks to research tools.</h2><p class="work-intro">Additional work across synthetic-media detection, financial NLP, Classical Tamil representation learning, and research tooling.</p></div><div class="compact-list"><article v-for="item in [...researchWork, ...publications]" :key="item.title" class="compact-item"><div><h3>{{ item.title }}</h3><p>{{ item.venue }} · {{ item.role }}</p><div v-if="item.links" class="compact-links"><a v-for="link in item.links" :key="link.href" :href="link.href" target="_blank" rel="noreferrer">{{ link.label }} ↗</a></div></div><span>{{ item.year }}</span></article></div></div>
+				<div class="project-row"><article v-for="project in [...researchProjects, ...engineeringProjects]" :key="project.title" class="project-card"><h3>{{ project.title }}</h3><p v-html="project.body"></p><div class="project-links"><a v-if="project.github" :href="project.github" target="_blank" rel="noreferrer">GitHub ↗</a><a v-if="project.live" :href="project.live" target="_blank" rel="noreferrer">Live demo ↗</a></div></article></div>
 			</section>
 
 			<section class="section panel credentials"><div class="section-label"><span>04</span> Foundation</div><div class="credentials-grid"><div><h2>{{ education.degree }}</h2><p>{{ education.school }}<br>{{ education.period }}</p></div><div><p v-for="fact in education.facts" :key="fact" v-html="fact"></p></div><div><p v-for="item in achievements" :key="item" v-html="item"></p><p class="interest-line">{{ researchInterests.join(' · ') }}</p></div></div></section>
