@@ -23,7 +23,7 @@ onMounted(() => applyTheme((localStorage.getItem('theme') as 'light' | 'dark') |
 			<section class="hero panel">
 				<div class="hero-kicker">Research portfolio · Chennai, India</div>
 				<div class="hero-grid"><div><p class="hero-overline">Amrit Gopinath</p><h1>Language models, <em>carefully studied.</em></h1></div><img class="portrait" :src="profile.portrait" alt="Amrit Gopinath" /></div>
-				<div class="hero-bottom"><p>{{ profile.intro }}</p><div class="hero-links"><a :href="profile.resumeHref" download>Résumé <span>↘</span></a><a :href="profile.github" target="_blank" rel="noreferrer">GitHub <span>↗</span></a><a :href="profile.linkedin" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a></div></div>
+				<div class="hero-bottom"><p>{{ profile.intro }}</p><div class="hero-links"><a :href="profile.resumeHref" target="_blank" rel="noreferrer">View résumé <span>↗</span></a><a :href="profile.github" target="_blank" rel="noreferrer">GitHub <span>↗</span></a><a :href="profile.linkedin" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a></div></div>
 			</section>
 			<section class="signal-strip panel" aria-label="Academic highlights"><div v-for="stat in heroStats" :key="stat.label" class="signal"><strong>{{ stat.value }}</strong><span>{{ stat.label }}</span></div><div class="signal signal-focus"><span>Focus</span><p>Multilingual NLP · Model introspection · MoE routing</p></div></section>
 
