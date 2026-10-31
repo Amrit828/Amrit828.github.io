@@ -2,9 +2,7 @@ export const profile = {
 	name: 'Amrit Gopinath',
 	title: 'Undergraduate Researcher in Natural Language Processing',
 	intro:
-		'Do we really understand what happens inside an AI model, beyond just observing its outputs? In particular, do we understand how models compute and represent information, and how that information shapes their decisions?',
-	direction:
-		'I’m interested in investigating whether there exist causal mechanisms that influence this computation process and determine the nature of a model’s response, and whether these mechanisms extend across different model architectures and scales. This is the long-term question guiding my research.',
+		'I study how causal mechanisms shape computation, representations, and decisions across AI architectures and scales.',
 	tagline: 'Asking sharper questions about how language models work.',
 	email: 'amritgopi06@gmail.com',
 	github: 'https://github.com/Amrit828',
