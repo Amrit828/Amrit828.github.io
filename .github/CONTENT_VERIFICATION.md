@@ -24,7 +24,7 @@ Checked on 31 October 2026 against the newly supplied `Amrit_Gopinath_Research_C
 
 ## CV-only details and verification limits
 
-- Education dates, expected graduation, AI/ML honors track, CGPA 9.383, department rank 1 through Semester 4, second-year GPA award position 2, and first-year GPA award position 3 match the new CV. No transcript, ranking notice, or award certificates were provided, so these remain self-reported rather than independently verified institutional facts. Both homepage academic figures are qualified through Semester 4.
+- Education dates, expected graduation, AI/ML honors track, CGPA 9.383, and department rank 1 through Semester 4 match both supplied CV versions. The second-year GPA award position 2 and first-year GPA award position 3 were reported in the first supplied CV and omitted from the follow-up version; the existing website entries retain that earlier source. No transcript, ranking notice, or award certificates were provided, so these remain self-reported rather than independently verified institutional facts. Both homepage academic figures are qualified through Semester 4.
 - Reviewing assistance matches the new CV. No review-assignment record or acknowledgement was supplied. The site now says reviewing assistance rather than asserting an appointed reviewer/sub-reviewer role.
 - ARR and ICON submission statuses match the CV; private submission-system records were not inspected. Neither is described as accepted.
 - Removed the old GDG Top 10 and institutional grant claims because neither the supplied CV nor the inspected sources substantiated them.
@@ -39,3 +39,12 @@ Checked on 31 October 2026 against the newly supplied `Amrit_Gopinath_Research_C
 - Inspected the built home, research, and projects pages in Chrome; no browser warnings or errors were captured during those checks.
 - `git diff --check` passed.
 - Validation above was completed locally before publication. The repository's deployment workflow builds and publishes GitHub Pages when changes are pushed to `main`.
+
+## Follow-up CV refresh, 31 October 2026
+
+- Compared both pages and all 15 embedded URI annotations of the replacement CV with the previously published download. Links, contact details, education figures, authorship, publication statuses, and existing headline research results are unchanged. Visually inspected both replacement pages.
+- Updated research descriptions to reflect the revised emphasis on frequency controls, causal interventions and shortcut controls, scarce-data evaluation, and constrained/open synthetic-image experiments.
+- Verified the newly included financial MCQA accuracies directly against Table 3 of [the published Task 1 paper](https://ceur-ws.org/Vol-4283/paper192.pdf): English 163/200 (81.5%), Chinese 153/200 (76.5%), and Arabic 172/200 (86.0%). Replaced the rank-focused website result with these final-test accuracies and sample sizes.
+- Verified the newly included Tamil generation comparison against Section 5.3 and Table 3 of `public/classical-tamil-icon-submission.pdf`: decoder-only token-F1 0.060 versus 0.108 for the constant top-25-word baseline on the same 30 held-out rows. Added the values to the paper and internship descriptions while retaining the qualification on word-order probes.
+- Replaced `public/resume.pdf` with an exact copy of the latest supplied CV. The MediaEval 2026 code-link discrepancy noted above remains in the supplied PDF; the website still uses the verified 2026 repository.
+- Follow-up validation: production build and `git diff --check` passed; all 17 internal targets resolved; generated research HTML includes the revised descriptions and both newly reported metrics. The supplied, public, and built CV files share SHA-256 `588c88db49c0b309d47db3a38be7e333143d90f756e2a5abae5871fa331a28e0` (122,252 bytes).

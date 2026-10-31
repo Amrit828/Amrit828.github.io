@@ -28,8 +28,8 @@ export const selectedResearch = [
 		title: 'A Declarative-Procedural Perspective on Expert Routing in Bilingual Mixture-of-Experts Language Models',
 		meta: 'ARR 2026 submission · arXiv preprint · First author',
 		bullets: [
-			'Asked whether expert routing in bilingual English-German MoE language models primarily reflects language identity and lexical information or higher-level grammatical and syntactic structure.',
-			'Compared curriculum and mixed-language training using controlled bilingual corpora and held-out probes; analyzed routing with mutual and conditional mutual information, entropy, Jensen-Shannon distance, frequency controls, and targeted ablations.',
+			'Investigated whether bilingual MoE routing captures lexical, grammatical, and syntactic structure, or mainly reflects language identity and frequency.',
+			'Led the design of controlled English–German corpora, curriculum and mixed-language training, and held-out linguistic probes; analyzed routing with mutual and conditional mutual information, entropy, Jensen-Shannon distance, frequency controls, and routing ablations.',
 			'No-curriculum training showed stronger aggregate specialization (<strong>peak MI 0.2599 versus 0.1148</strong>), but the dominant language changed with the training seed. Curriculum training produced a more language-balanced routing profile across the two seeds.',
 		],
 		links: [
@@ -42,7 +42,7 @@ export const selectedResearch = [
 		title: 'Having a State Is Not Knowing It',
 		meta: 'Apart Research Digital Minds Research Sprint · Co-author (equal contribution)',
 		bullets: [
-			'Investigated whether language models can report causally relevant internal decision states, separating possession of a state from verbal access through a falsifiable hierarchy of introspection capabilities.',
+			'Examined whether language models can report internal decision states and predict how causal interventions change their behavior, using matched external probes, separate counterfactual prediction/scoring passes, and shortcut controls.',
 			'Replicated concept injection in Llama-3.2-3B-Instruct and built a controlled Qwen decision-state benchmark using measured logit-margin shifts. Naive self-report achieved <strong>0.243 macro-F1</strong>, trained native reporting <strong>0.522</strong>, and a matched external residual MLP <strong>1.000 F1</strong> on this benchmark.',
 			'Counterfactual intervention-direction prediction reached <strong>0.695 F1 on 96 held-out base trials</strong>, falling to <strong>0.564</strong> on unseen direction mixtures. Negative response-curve R² did not support quantitative self-modeling.',
 		],
@@ -64,7 +64,7 @@ export const publications = [
 		bullets: [
 			'Constructed a corpus of <strong>1,262 Classical Tamil verse–commentary (urai) pairs</strong> spanning five source sections and evaluated what neural representations recover beyond lexical overlap.',
 			'Compared recurrent, Transformer, Siamese-style, encoder–decoder, and decoder-only models with controls-first evaluation, including minimal-pair word-order probes.',
-			'The decoder preferred authentic word order in <strong>107/112 comparisons (95.5%)</strong>, mostly random line reorderings, but failed to generate verse-specific commentary. Matched controls exposed inflated canonical correlation and overfitting.',
+			'The decoder preferred authentic word order in <strong>107/112 comparisons (95.5%)</strong>, mostly random line reorderings. On <strong>30 held-out rows</strong>, generation scored <strong>0.060 token-F1</strong> versus <strong>0.108</strong> for a constant-word baseline, exposing limited verse-specific generation.',
 		],
 		links: [
 			{ label: 'Paper', href: '/classical-tamil-icon-submission.pdf' },
@@ -113,7 +113,7 @@ export const publications = [
 		venue: 'MediaEval 2026 Working Notes',
 		area: 'Synthetic Media Detection',
 		bullets: [
-			'Compared pretrained Swin Transformers, luminance-only variants, MIL aggregation, and compact CNN/ResNet–GRU–ViT hybrids.',
+			'Investigated the effects of training-data diversity, input representation, and model architecture by comparing Swin Transformers, global and MIL-style aggregation, luminance-only inputs, and CNN/ResNet–GRU–ViT hybrids under constrained and open training settings.',
 			'Swin Base achieved <strong>0.6997 synthetic-class F1</strong> and <strong>0.7471 AUC</strong> in open validation with external SID_Set training data; compared precision–recall trade-offs with constrained runs.',
 		],
 		links: [
@@ -130,7 +130,7 @@ export const publications = [
 		area: 'Financial NLP',
 		bullets: [
 			'Built a multilingual routed retrieval-augmented system (FAISS retrieval + qwen3-32b router + qwen3-32b/gpt-oss-20b scoring ensemble) for financial MCQA across English, Chinese, and Arabic.',
-			'Achieved leaderboard results of <strong>6th in English, 6th in Chinese, and 7th in Arabic</strong>.',
+			'Final MCQA accuracy was <strong>81.5% in English, 76.5% in Chinese, and 86.0% in Arabic</strong>, evaluated on <strong>200 questions per language</strong>.',
 		],
 		links: [
 			{ label: 'Paper', href: 'https://ceur-ws.org/Vol-4283/paper192.pdf' },
@@ -207,9 +207,9 @@ export const experience = [
 		title: 'NLP Research Intern',
 		meta: 'National Institute of Technology Tiruchirappalli · Department of Computer Applications',
 		bullets: [
-			'Studied Classical Tamil verse–commentary representations under faculty mentorship, developing recurrent and Transformer encoders, Siamese matching, and encoder–decoder and decoder-only generation pipelines.',
+			'Studied what neural models can recover from scarce Classical Tamil verse–commentary data beyond lexical overlap and source-specific patterns, developing recurrent and Transformer encoders, Siamese matching, and generation pipelines under faculty mentorship.',
 			'First author of <strong>“Vectorizing Classical Tamil: Representation Learning for Verse–Commentary Pairs”</strong>, submitted to ICON 2026.',
-			'Evaluated learned representations and generation against lexical, random-data, and constant-output controls; identified inflated canonical correlation, overfitting, and failures to generate verse-specific commentary.',
+			'Evaluated representations and generation against lexical, random-data, and constant-output controls, with held-out and out-of-domain evaluation. On 30 held-out rows, decoder-only generation scored <strong>0.060 token-F1</strong> versus <strong>0.108</strong> for a constant-word baseline.',
 		],
 		links: [
 			{ label: 'Paper', href: '/classical-tamil-icon-submission.pdf' },
