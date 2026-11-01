@@ -48,3 +48,10 @@ Checked on 31 October 2026 against the newly supplied `Amrit_Gopinath_Research_C
 - Verified the newly included Tamil generation comparison against Section 5.3 and Table 3 of `public/classical-tamil-icon-submission.pdf`: decoder-only token-F1 0.060 versus 0.108 for the constant top-25-word baseline on the same 30 held-out rows. Added the values to the paper and internship descriptions while retaining the qualification on word-order probes.
 - Replaced `public/resume.pdf` with an exact copy of the latest supplied CV. The MediaEval 2026 code-link discrepancy noted above remains in the supplied PDF; the website still uses the verified 2026 repository.
 - Follow-up validation: production build and `git diff --check` passed; all 17 internal targets resolved; generated research HTML includes the revised descriptions and both newly reported metrics. The supplied, public, and built CV files share SHA-256 `588c88db49c0b309d47db3a38be7e333143d90f756e2a5abae5871fa331a28e0` (122,252 bytes).
+
+## Research CV refresh, 1 November 2026
+
+- Compared the full text of both pages of `research_cv.pdf` with the previous `public/resume.pdf` and visually inspected both new pages. The only text change removes the ARR 2026 submission label from the MoE paper; all other CV text is unchanged.
+- Removed that label from both the selected-research metadata and the publication entry. The paper remains identified as an arXiv preprint; the earlier audit's ARR status notes are historical.
+- Added an unchanged copy at `public/research_cv.pdf` and pointed the homepage's “View research CV” link to `/research_cv.pdf`. Refreshed `public/resume.pdf` with the same file so existing download links also serve the latest CV.
+- Validation: `npm.cmd run build` passed; generated homepage HTML links to the new CV, and generated pages contain no ARR submission label. All 16 internal targets in the three generated pages resolve. Both public PDFs and both built PDFs match the supplied file byte-for-byte, with SHA-256 `8a6064d6772f8ba7c0d97c05d22bc5fc0975aa6c78d414b8e239516be8e2c7af` (122,236 bytes).

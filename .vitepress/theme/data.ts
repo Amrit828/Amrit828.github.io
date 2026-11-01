@@ -10,7 +10,7 @@ export const profile = {
 	scholar: '',
 	semanticScholar: '',
 	orcid: '',
-	resumeHref: '/resume.pdf',
+	resumeHref: '/research_cv.pdf',
 	portrait: '/portrait.jpg',
 };
 
@@ -26,7 +26,7 @@ export const selectedResearch = [
 	{
 		year: '2026',
 		title: 'A Declarative-Procedural Perspective on Expert Routing in Bilingual Mixture-of-Experts Language Models',
-		meta: 'ARR 2026 submission · arXiv preprint · First author',
+		meta: 'arXiv preprint · First author',
 		bullets: [
 			'Investigated whether bilingual MoE routing captures lexical, grammatical, and syntactic structure, or mainly reflects language identity and frequency.',
 			'Led the design of controlled English–German corpora, curriculum and mixed-language training, and held-out linguistic probes; analyzed routing with mutual and conditional mutual information, entropy, Jensen-Shannon distance, frequency controls, and routing ablations.',
@@ -77,7 +77,7 @@ export const publications = [
 			'A Declarative–Procedural Perspective on Expert Routing in Bilingual Mixture-of-Experts Language Models',
 		role: 'First author',
 		status: 'Preprint',
-		venue: 'arXiv:2608.15102 · ARR 2026 submission',
+		venue: 'arXiv:2608.15102',
 		area: 'NLP, Linguistics & Interpretability, MoE Analysis',
 		bullets: [
 			'Studied linguistic specialization and expert routing in <strong>bilingual English–German Mixture-of-Experts Transformers</strong> using probing and information-theoretic analysis.',
